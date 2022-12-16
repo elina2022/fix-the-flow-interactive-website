@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="233.245 172.624 86.036 162.341" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <path style="stroke: rgb(255, 0, 0); stroke-width: 0.2px; fill: rgb(255, 0, 0);" d="M 247.634 321.032 L 253.604 315.44 C 253.604 315.44 247.105 307.732 250.354 302.442 C 253.603 297.152 256.551 296.699 257.155 305.465 C 257.759 314.231 261.765 323.526 269.7 324.055 C 277.635 324.584 288.592 312.795 276.879 297.53 C 265.166 282.265 249.674 289.369 249.674 289.369 C 249.674 289.369 231.689 297.228 247.86 320.881" transform="matrix(0, 1, -1, 0, 567.453781, 44.336441)"/>
+  <circle style="stroke: rgb(255, 0, 0); stroke-width: 0.2px; fill: rgb(255, 0, 0);" cx="84" cy="50" r="25" transform="matrix(0, 1, -1.08, 0, 316.450745, 169.108902)" bx:origin="0.5 0.5"/>
+  <circle style="stroke: rgb(255, 0, 0); stroke-width: 0.2px; fill: rgb(255, 0, 0);" cx="220" cy="263.939" r="20" transform="matrix(0, 1, -1, 0, 526.390259, -26.390755)" bx:origin="0.5 0.5"/>
+  <circle style="stroke: rgb(255, 0, 0); stroke-width: 0.2px; fill: rgb(255, 255, 255);" cx="220" cy="263.939" r="10" transform="matrix(0, 1, -1, 0, 526.390259, -26.390755)" bx:origin="0.5 0.5"/>
+  <rect x="248.478" y="209.06" width="15.98" height="80.029" style="stroke: rgb(255, 0, 0); stroke-width: 0.2px; fill: rgb(255, 0, 0);" transform="matrix(0, 1, -1, 0, 526.390259, -26.390755)"/>
+  <circle style="stroke: rgb(255, 0, 0); stroke-width: 0.2px; fill: rgb(255, 255, 255);" cx="276" cy="263.939" r="13" transform="matrix(0, 1, -1, 0, 526.390259, -26.390755)" bx:origin="0.5 0.5"/>
+  <rect x="328.523" y="246.718" width="24.258" height="9.748" style="stroke: rgb(255, 0, 0); stroke-width: 0.2px; fill: rgb(255, 0, 0);" transform="matrix(0, 1, -1, 0, 526.390259, -26.390755)"/>
+  <path style="stroke-width: 0.2px; fill: rgb(255, 255, 255); stroke: rgb(255, 0, 0);" d="M 258.14 306.509 C 262.574 306.056 264.822 307.294 266.031 310.569 C 267.323 314.069 266.999 317.119 265.048 319.713 C 262.925 322.536 258.381 321.058 257.643 315.966 C 257.125 312.39 256.506 306.595 258.157 306.509" transform="matrix(0, 1, -1, 0, 575.718979, 51.827805)"/>
+</svg>

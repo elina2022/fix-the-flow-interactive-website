@@ -1,0 +1,602 @@
+:root {
+    --red: rgb(255, 0, 0);
+    --black: rgb(0, 0, 0);
+    --blueblack: #223434;
+    --darkgrey: #333;
+    --lightgray: #6f6f6f;
+    --white: rgb(255, 255, 255);
+    --search-border: #e6e6e6;
+    --search-bg: #f6f6f6;
+    --hr: rgb(200, 200, 200);
+    --footer-height: 20rem;
+    --transition-time: .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --font-1: 13rem;
+    --font-2: 7.97rem;
+    --font-3: 4.74rem;
+    --font-4: 2.82rem;
+    --font-5: 1.68rem;
+    --font-6: 1rem;
+    --font-7: 0.6rem;
+    --font-8: 0.35rem;
+}
+
+@font-face {
+    font-family: AvenirRoman;
+    src: url(font/Avenir-roman.ttf);
+}
+
+@font-face {
+    font-family: AvenirMedium;
+    src: url(/font/Avenir-medium.ttf);
+}
+
+@font-face {
+    font-family: AvenirBlack;
+    src: url(font/Avenir\-black.ttf);
+}
+
+* {
+    box-sizing:border-box
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: avenirroman, Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0rem 1rem 0rem 1rem;
+    color: var(--black);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+* {
+    padding-inline-start: 0;
+    list-style: none;
+    outline: none;
+}
+
+#logo {
+    margin-top: -1rem;
+    width: 5rem;
+    transform: rotate(270deg) translateY(20%);
+    cursor: pointer;
+}
+
+#navUl {
+    display: flex;
+    margin-top: -2rem;
+    font-size: 1.3;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--hr);
+    font-family: avenirblack, Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.navIcons:hover {
+    filter: invert(24%) sepia(90%) saturate(6608%) hue-rotate(355deg) brightness(100%) contrast(124%);
+}
+
+.navItems:hover{
+    color: red;
+}
+
+.navItems:hover > .navIcons{
+    filter: invert(24%) sepia(90%) saturate(6608%) hue-rotate(355deg) brightness(100%) contrast(124%);
+}
+
+.navItems:hover > .more{
+    filter: invert(24%) sepia(90%) saturate(6608%) hue-rotate(355deg) brightness(100%) contrast(124%);
+}
+
+.more:hover{
+    filter: invert(24%) sepia(90%) saturate(6608%) hue-rotate(355deg) brightness(100%) contrast(124%);
+}
+
+.navIcons {
+    width: 1.8rem;
+    padding-right: 0.5rem;
+    top: 0.3rem;
+    position: relative;
+}
+
+.more, .more2 {
+    position: relative;
+    width: 1.3rem;
+    rotate: 90deg;
+    top: 0.4rem;
+}
+
+.navItems {
+    padding-right: 1.5rem;
+    font-family: avenirblack, Arial, Helvetica, sans-serif;
+}
+
+#image {
+    width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0% 50%;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-family: avenirblack, Arial, Helvetica, sans-serif;
+    display: inline-block;
+}
+
+
+h2{
+    margin-top: -0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 100;
+    color: var(--darkgrey);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--hr);
+}
+
+#dikResultaat{
+    color: var(--black);
+    font-size: 1rem;
+}
+
+#verfijnen {
+    width: 200px;
+    width: 17%;
+    float: left;
+    margin-right: 5%;
+    margin-top: 2rem;
+}
+
+.faciliteiten:hover{
+    color: red;
+}
+
+.underline:hover{
+    text-decoration: underline;
+}
+
+.faciliteiten:hover .facIcons{
+    filter: invert(24%) sepia(90%) saturate(6608%) hue-rotate(355deg) brightness(100%) contrast(124%);
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+    accent-color: var(--red);
+}
+
+#postcode {
+    cursor: text;
+    accent-color: var(--red);
+    caret-color: var(--red);
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    width: auto;
+    font-size: 1.2rem;
+    background-color: var(--search-bg);
+    border: 1px solid var(--search-border);
+}
+
+#postcode:hover,
+#postcode:active, 
+#postcode:focus {
+    border: 1px solid var(--black);
+}
+
+#postcode {
+    color: var(--lightgray);
+}
+
+.checks{
+    cursor: pointer;
+}
+
+.faciliteiten {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.facIcons {
+    width: 2.1rem;
+    position: relative;
+    top: 0.3rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.stilteruimte1, .stopcontact1, .cafe1 {
+    width: 2.3rem;
+}
+
+.facNumber {
+    color: var(--darkgrey);
+}
+
+#section1 {
+    margin-top: 2rem;
+    float: right;
+    width: 78%;
+    margin-bottom: -4rem;
+}
+
+h3 {
+    margin-top: 2rem;
+    font-weight: 200;
+    font-family: avenirmedium, Arial, Helvetica, sans-serif;
+}
+
+#map {
+    width: 58rem;
+    width: 100%;
+    height: 40rem;
+    margin-top: -.5rem;
+    margin-bottom: 10rem;
+}
+
+#sectionLi{
+    margin-bottom: var(--footer-height);
+}
+
+#listWerkplekken {
+    margin-top: -5rem;
+    width: 46%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 290rem;
+    width: 100%;
+}
+
+#break{
+    /* flex-basis: 100%; */
+}
+
+.vestiging {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0px 0px 7px -2px black;
+    padding: 0.5rem 1.5rem;
+    box-sizing: border-box;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vestigingNaam{
+    font-size: 1.2rem;
+    font-family: avenirblack, Arial, Helvetica, sans-serif;
+    margin-bottom: .8rem;
+}
+
+.openingstijden {
+    font-family: avenirroman, Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--hr);
+    padding-bottom: 0.5rem;
+    color: var(--darkgrey);
+}
+
+.facIconsLi1 {
+    margin-top: .8rem;
+}
+
+.facIconsUl {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-bottom: 1.3rem;
+}
+
+.facIconsLi {
+    width: 1rem;
+    position: relative;
+    top: 0.2rem;
+    opacity: 0.2;
+}
+
+.facIconsLiAvailable{
+    width: 1rem;
+    position: relative;
+    top: 0.2rem;
+    opacity: 1;
+}
+.wifi, .stopcontact, .computer, .printer, .toilet, .cafe, .stilteruimte, .facNum {
+    letter-spacing: 1px;
+    font-size: .8rem;
+    background-color: rgba(50, 50, 50);
+    border-radius: 5px;
+    color: white;
+    padding: .2rem .4rem;
+    position: absolute;
+    z-index: 1;
+    margin-top: -1.5rem;
+    visibility: hidden;
+}
+.wifi::before, .stopcontact::before, .computer::before, .printer::before, .toilet::before, .cafe::before, .stilteruimte::before, .facNum::before {
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 0;
+    top: 100%;
+    left: 40%;
+    border-left: 0.4rem solid transparent;
+    border-right: 0.4rem solid transparent;  
+    border-top: 0.4rem solid rgb(50, 50, 50);
+}
+
+.wifi{ margin-left: -1.75rem; }
+.wifi::before{ margin-left: -.2rem; }
+
+.stopcontact{ margin-left: -3.4rem; }
+.stopcontact::before{ margin-left: .2rem; }
+
+.computer{ margin-left: -2.9rem; }
+
+.printer{ margin-left: -2.2rem; }
+.printer::before{ margin-left: -.2rem; }
+
+.toilet{ margin-left: -2rem; }
+.toilet::before{ margin-left: -.1rem; }
+
+.cafe{ margin-left: -1.8rem; }
+.cafe::before{ margin-left: -.3rem; }
+
+.stilteruimte{ margin-left: -3.3rem; }
+.stilteruimte::before{ margin-left: .1rem; }
+
+.facNum{ margin-left: -16.4rem; margin-top: -1.95rem;}
+.facNum::before{ margin-left: 8.2rem; }
+
+#facNum{
+    cursor: default;
+}
+
+#wifi:hover ~ .wifi{ visibility: visible; }
+#stopcontact:hover ~ .stopcontact{ visibility: visible; }
+#computer:hover ~ .computer{ visibility: visible; }
+#printer:hover ~ .printer{ visibility: visible; }
+#toilet:hover ~ .toilet{ visibility: visible; }
+#cafe:hover ~ .cafe{ visibility: visible; }
+#stilteruimte:hover ~ .stilteruimte{ visibility: visible; }
+#facNum:hover .facNum{ visibility: visible; }
+
+
+
+
+
+
+
+
+#facNum{
+    margin-left: -1rem;
+    font-size: 0.9rem;
+    margin-top: 0.45rem;
+    font-family: avenirroman, Arial, Helvetica, sans-serif;
+}
+
+.boekButton{
+    margin-top: .2rem;
+    position: relative;
+    top: 0;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0rem .1rem .3rem .5rem;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition-time);
+    width: 6.5rem;
+}
+
+.boekButton:hover, .boekButton:active{
+    background-color: #454545;
+}
+
+.more2{
+    width: 1.1rem;
+    rotate: 0deg;
+    margin-left: .3rem;
+    top: 0.25rem;
+    fill: var(--white);
+    transition: var(--transition-time);
+}
+
+footer {
+    background-color: var(--black);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: var(--footer-height);
+}
+
+#containerFooterBoth {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+    padding-bottom: 2rem;
+}
+
+.containerFooter1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -0.5rem;
+}
+
+.containerFooter2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#aanmelden {
+    color: var(--white);
+}
+
+#aanmeldenButton:hover {
+    color: var(--red);
+}
+
+input[type="submit"]{
+    cursor: pointer;
+}
+
+#socialList {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.1rem;
+}
+
+.social {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(134deg) brightness(103%) contrast(102%);
+}
+
+#nieuwsbrief {
+    background-color: transparent;
+    border: none;
+    border: 1px solid var(--red);
+    width: 20rem;
+    position: relative;
+    margin-right: 1rem;
+    padding: 0.7rem 0.7rem;
+    /* padding: 0.6rem; */
+    color: white;
+}
+
+#nieuwsbrief:hover, 
+#nieuwsbrief:active, 
+#nieuwsbrief:focus {
+    border-color: white;
+}
+
+#aanmeldenButton {
+    background-color: var(--black);
+    border: 1px solid var(--red);
+    color: var(--white);
+    padding: 0.6rem;
+    letter-spacing: 0.12rem;
+    font-family: avenirmedium, Arial, Helvetica, sans-serif;
+}
+
+#containerLogos {
+    border-bottom: 1px solid var(--white);
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 0rem;
+    width: 1200px;
+}
+
+.logos {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(134deg) brightness(103%) contrast(102%);
+    width: 3.5rem;
+}
+
+.logos:hover, .logos:active, .logos:focus {
+    filter: invert(24%) sepia(90%) saturate(6608%) hue-rotate(355deg) brightness(100%) contrast(124%);
+}
+
+.afro {
+    width: 5rem;
+}
+
+#logoFull {
+    width: 28rem;
+    margin-top: -3rem;
+}
+
+#listContact {
+    display: flex;
+    gap: 4rem;
+    color: var(--black);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(134deg) brightness(103%) contrast(102%);
+}
+
+.contact {
+    font-family: avenirmedium, Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+.contactIcon {
+    padding-right: 1rem;
+    position: relative;
+    top: 0.2rem;
+    width: 2.5rem;
+}
+
+.mailIcons {
+    top: 0.3rem;
+}
+
+.tijdenList {
+    display: flex;
+    /* background-color: rgb(202, 202, 202); */
+    width: 21.5rem;
+    overflow-y: hidden;
+    gap: .3rem;
+    height: 3rem;
+    -webkit-mask: linear-gradient(90deg,#0000,#000 0% 90%,#0000);
+}
+
+.begintijd, .eindtijd{
+    font-size: .8rem;
+    font-family: avenirmedium, Arial, Helvetica, sans-serif;
+    margin-bottom: .2rem;
+}
+
+.eindtijd{
+    margin-top: 1.5rem;
+}
+
+time{
+    padding: .2rem .4rem;
+    font-size: .9rem;
+    border-radius: .3rem;
+    box-shadow: inset 0px 0px 4px 0px black;
+    /* background-color: rgb(50, 50, 50);
+    color: white;
+    box-shadow: inset 0px 0px 5px 2px black; */
+}
+
+.timeNotAvailable{
+    opacity: 0.4;
+}
+
+.timeAvailable, .timeAvailable2{
+    cursor: pointer;
+}
+
+#containerBegintijd, #containerEindtijd{
+    overflow: hidden;
+    height: 0rem;
+    transition: var(--transition-time);
+}
+
+.tijdenList::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0px 0px 3px 0px var(--black);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.tijdenList::-webkit-scrollbar {
+    height: .4rem;
+    background-color: rgb(245, 245, 245);
+}
+
+.tijdenList::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    -webkit-box-shadow: inset 0px 0px 3px 2px var(--black);
+    background-color: rgb(150, 150, 150);
+}

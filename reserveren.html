@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Werkplekken</title>
+</head>
+<body>
+    <img onclick="toggle()" id="logo" src="assets/oba-logo.svg" alt="OBA logo">
+    <nav>
+        <ul id="navUl">
+            <li class="navItems"><img class="navIcons" src="assets/home.svg" alt="Home">Home</li>
+            <li class="navItems"><img class="navIcons" src="assets/book.svg" alt="Artikelen">Artikelen <svg class="more" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+            <li class="navItems"><img class="navIcons" src="assets/pay.svg" alt="Betalingen">Betalingen <svg class="more" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+            <li class="navItems"><img class="navIcons" src="assets/person.svg" alt="gegevens">Gegevens</li>
+            <!-- <li class="navItems"><img class="navIcons" src="assets/question.svg" alt="Vragen">vragen</li> -->
+            <li class="navItems"><img class="navIcons" src="assets/logout.svg" alt="Uitloggen">Uitloggen</li>
+        </ul>
+    </nav>
+    <img  id="image" src="assets/foto.jpg" alt="">
+    <section id="verfijnen">
+        <h3>Resultaten verfijnen</h3>
+        <ul id="faciliteitenList">
+            <li class="faciliteiten">
+                <label class="checks">
+                    <input type="checkbox">
+                    <img class="facIcons wifi1" src="assets/wifi.svg" alt="WiFi"><span class="underline">WiFi<span class="facNumber"> (79)</span></span>
+                </label>
+            </li>
+            <li class="faciliteiten">
+                <label class="checks">
+                    <input type="checkbox">
+                    <img class="facIcons stopcontact1" src="assets/outlet.svg" alt="Stopcontact"><span class="underline">Stopcontact<span class="facNumber"> (60)</span></span>
+                </label>
+            </li>
+            <li class="faciliteiten">
+                <label class="checks">
+                    <input type="checkbox">
+                    <img class="facIcons computer1" src="assets/computer.svg" alt="Computer"><span class="underline">Computer<span class="facNumber"> (42)</span></span>
+                </label>
+            </li>
+            <li class="faciliteiten">
+                <label class="checks">
+                    <input type="checkbox">
+                    <img class="facIcons printer1" src="assets/printer.svg" alt="Printer"><span class="underline">Printer<span class="facNumber"> (32)</span></span>
+                </label>
+            </li>
+            <li class="faciliteiten">
+                <label class="checks">
+                    <input type="checkbox">
+                    <img class="facIcons toilet1" src="assets/toilet.svg" alt="Toilet"><span class="underline">Toilet<span class="facNumber"> (58)</span></span>
+                </label>
+            </li>
+            <li class="faciliteiten">
+                <label class="checks">
+                    <input type="checkbox">
+                    <img class="facIcons cafe1" src="assets/food.svg" alt="Cafe"><span class="underline">Cafe<span class="facNumber"> (24)</span></span>
+                </label>
+            </li>
+            <li class="faciliteiten">
+                <label class="checks">
+                    <input type="checkbox">
+                    <img class="facIcons stilteruimte1" src="assets/silence.svg" alt="Stilteruimte">Stilteruimte <span class="facNumber"> (47)</span>
+                </label>
+            </li>
+        </ul>
+    </section>
+    <main>
+        <section id="section1" >
+            <h1>Werkplek reserveren</h1>
+            <h2><span id="dikResultaat">Resultaten</span> (884 werkplekken, 79 soorten, 27 vestigingen)</h2>
+            <h3 id="vindVestiging">Vind dichtsbijzijnde vestiging <input id="postcode" type="text" placeholder="1234AB"></h3>
+            <iframe id="map" src="https://localfocuswidgets.net/62ebbaa5d5700"></iframe>
+        </section>
+        <section id="sectionLi" >
+            <ul id="listWerkplekken">
+                <li class="vestiging"><p class="vestigingNaam">Oosterdok</p>
+                    <ul>
+                        <li class="openingstijden">08:00 tot 22:00</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(5)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton"><span class="reserveer" >Reserveer</span><svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+
+                        <div id="containerBegintijd">
+                        <li class="begintijd">Kies begintijd</li>
+                        <li>
+                            <ul class="tijdenList">
+                                <li><time class="timeNotAvailable">08:00</time></li>
+                                <li><time class="timeNotAvailable">09:00</time></li>
+                                <li><time class="timeNotAvailable">10:00</time></li>
+                                <li><time class="timeNotAvailable">11:00</time></li>
+                                <li><time class="timeAvailable time" >12:00</time></li>
+                                <li><time class="timeAvailable time" >13:00</time></li>
+                                <li><time class="timeAvailable time" >14:00</time></li>
+                                <li><time class="timeAvailable time" >15:00</time></li>
+                                <li><time class="timeAvailable time" >16:00</time></li>
+                                <li><time class="timeAvailable time" >17:00</time></li>
+                                <li><time class="timeAvailable time" >18:00</time></li>
+                                <li><time class="timeAvailable time" >19:00</time></li>
+                                <li><time class="timeAvailable time" >20:00</time></li>
+                                <li><time class="timeAvailable time" >21:00</time></li>
+                            </ul>
+                        </li>
+                        </div>
+
+                        <div id="containerEindtijd">
+                        <li class="eindtijd">Kies eindtijd</li>
+                        <li>
+                            <ul class="tijdenList">
+                                <li><time class="timeAvailable2 time" >09:00</time></li>
+                                <li><time class="timeAvailable2 time" >10:00</time></li>
+                                <li><time class="timeAvailable2 time" >11:00</time></li>
+                                <li><time class="timeAvailable2 time" >12:00</time></li>
+                                <li><time class="timeAvailable2 time" >13:00</time></li>
+                                <li><time class="timeAvailable2 time" >14:00</time></li>
+                                <li><time class="timeAvailable2 time" >15:00</time></li>
+                                <li><time class="timeAvailable2 time" >16:00</time></li>
+                                <li><time class="timeAvailable2 time" >17:00</time></li>
+                                <li><time class="timeAvailable2 time" >18:00</time></li>
+                                <li><time class="timeNotAvailable">19:00</time></li>
+                                <li><time class="timeNotAvailable">20:00</time></li>
+                                <li><time class="timeNotAvailable">21:00</time></li>
+                                <li><time class="timeNotAvailable">22:00</time></li>
+                            </ul>
+                        </li>
+                        </div>
+
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(13)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(20)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(33)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Banne</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(2)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(12)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Molenwijk</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(9)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(21)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(22)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(17)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Van der Pek</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(12)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Waterlandplein</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(15)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(23)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(20)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Ijburg</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(4)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(12)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(14)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(26)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Javaplein</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(3)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(16)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Linnaeus</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(10)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(15)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(19)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Diemen</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(2)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(17)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(21)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(24)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Duivendrecht</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(7)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(14)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(21)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(28)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Ouderkerk</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(5)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Weesp</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(15)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(20)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(25)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Reigerbos</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(7)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(12)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Bijlmerplein</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(19)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(23)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(17)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(20)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Buitenveldert</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(5)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(16)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(14)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Amstel</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(6)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(13)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(19)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(26)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Olympisch Kwartier</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(6)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(8)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(18)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(21)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Roelof Hartplein</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(3)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(13)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Bos en Lommer</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(17)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(19)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(14)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">De Hallen</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(1)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(9)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(8)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Mercatorplein</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(7)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(17)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Spaarndammerbuurt</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(5)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(18)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(17)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLi" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(14)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Staatsliedenbuurt</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(6)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(13)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(20)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Geuzenveld</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(8)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Osdorp</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(18)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(19)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(14)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(20)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLi" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLiAvailable" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(27)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Slotermeer</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(12)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(17)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLi" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLi" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(23)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="vestiging"><p class="vestigingNaam">Postjesweg</p>
+                    <ul>
+                        <li class="openingstijden">09:30 tot 17:30</li>
+                        <li class="facIconsLi1"> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(9)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLi" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(18)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <ul class="facIconsUl">
+                                <li ><img class="facIconsLiAvailable" id="wifi" src="assets/wifi.svg" alt="WiFi"><small class="wifi">WiFi</small></li>
+                                <li ><img class="facIconsLiAvailable" id="stopcontact" src="assets/outlet.svg" alt="Stopcontact"><small class="stopcontact">Stopcontact</small></li>
+                                <li ><img class="facIconsLiAvailable" id="computer" src="assets/computer.svg" alt="Computer"><small class="computer">Computer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="printer" src="assets/printer.svg" alt="Printer"><small class="printer">Printer</small></li>
+                                <li ><img class="facIconsLiAvailable" id="toilet" src="assets/toilet.svg" alt="Toilet"><small class="toilet">Toilet</small></li>
+                                <li ><img class="facIconsLi" id="cafe" src="assets/food.svg" alt="Cafe"><small class="cafe">Cafe</small></li>
+                                <li ><img class="facIconsLi" id="stilteruimte" src="assets/silence.svg" alt="Stilteruimte"><small class="stilteruimte">Stilteruimte</small></li>
+                                <li id="facNum">(24)<small class="facNum">Aantal werkplekken met deze faciliteiten</small></li>
+                                <li><button class="boekButton">Reserveer<svg class="more2" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M190.06 414l163.12-139.78a24 24 0 000-36.44L190.06 98c-15.57-13.34-39.62-2.28-39.62 18.22v279.6c0 20.5 24.05 31.56 39.62 18.18z"></path></svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+            <div id="containerLogos">
+            <a target="_blank" href="https://www.huisvanalletalen.nl/partners/ambassade-van-de-republiek-armenie"><img class="logos armenia" src="assets/armenia.PNG" alt=""></a>
+            <a target="_blank" href="https://www.huisvanalletalen.nl/partners/ambassade-van-hongarije"><img class="logos" src="assets/hungary.PNG" alt=""></a>
+            <a target="_blank" href="https://www.huisvanalletalen.nl/partners/the-black-archives"><img class="logos" src="assets/archives.PNG" alt=""></a>
+            <a target="_blank" href="https://www.huisvanalletalen.nl/partners/amsterdam-museum"><img class="logos" src="assets/museum.PNG" alt=""></a>
+            <a target="_blank" href="https://cafebelcampo.nl/"><img class="logos" src="assets/coffee.PNG" alt=""></a>
+            <a target="_blank" href="https://www.huisvanalletalen.nl/partners/afro-bieb"><img class="logos afro" src="assets/afro.PNG" alt=""></a>
+        </div>
+        <div id="containerFooterBoth">
+            
+            <div class="containerFooter1">
+                <ul id="listContact">
+                    <li class="contact"><img class="contactIcon" src="assets/phone.svg" alt="" width="20" height="20">020-523 0 900</li>
+                    <li class="contact"><img class="contactIcon mailIcon" src="assets/mail.svg" alt="" width="20" height="20">klantenservice@oba.nl</li>
+                </ul>
+                <ul id="socialList">
+                    <li><img class="social" src="assets/instagram.svg" alt="instagram" width="35" height="35"></li>
+                    <li><img class="social" src="assets/twitter.svg" alt="twitter" width="35" height="35"></li>
+                    <li><img class="social" src="assets/facebook.svg" alt="facebook" width="35" height="35"></li>
+                    <li><img class="social" src="assets/linkedin.svg" alt="linkedin" width="35" height="35"></li>
+                </ul>
+            </div>
+            
+            <div class="containerFooter2">
+                <p id="aanmelden">Meld u aan voor onze nieuwsbrief</p>
+                <div id="containerInputButton">
+                    <input id="nieuwsbrief" type="email" placeholder="email@adres.com">
+                    <input id="aanmeldenButton" type="submit" value="Aanmelden">
+                </div>
+            </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
