@@ -4,8 +4,7 @@ Repository voor 'fix the flow interactive website'
 
 
 ## Links
-Live website: https://oba.student.fdnd.nl/OBA%202.1/OBA%202.4/reserveren.html
-
+Live website: http://oba-werkplekken-elina.student.fdnd.nl/
 
 
 ## Beschrijving
