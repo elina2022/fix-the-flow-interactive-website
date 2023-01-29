@@ -48,7 +48,7 @@ body {
     font-family: avenirroman, Arial, Helvetica, sans-serif;
     max-width: 1200px;
     margin: auto;
-    padding: 0rem 1rem 0rem 1rem;
+    /* padding: 0rem 1rem 0rem 1rem; */
     color: var(--black);
     background-color: var(--white);
     overflow-x: hidden;
@@ -123,6 +123,7 @@ body {
     height: 300px;
     object-fit: cover;
     object-position: 0% 50%;
+    /* border-radius: 10% / 90%; */
 }
 
 h1 {
@@ -599,4 +600,13 @@ time{
     border-radius: 100px;
     -webkit-box-shadow: inset 0px 0px 3px 2px var(--black);
     background-color: rgb(150, 150, 150);
+}
+
+#reservatieVoltooid{
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 0rem;
+    overflow: hidden;
+    margin: 0rem;
+    transition: var(--transition-time);
 }

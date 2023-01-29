@@ -9,6 +9,7 @@ let btnText = $(".reserveer")
 let tijden = $all(".timeAvailable")
 let tijden2 = $all(".timeAvailable2")
 let tijdenAlle = $all(".time")
+let voltooid = document.querySelector("#reservatieVoltooid")
 
 btn.addEventListener("click", showTijd)
 for (tijd of tijden) {tijd.addEventListener('click', buttonComesDown)}
@@ -19,9 +20,12 @@ function showTijd(){
         eind.style.height = "6rem"
         arrow.style.rotate = "90deg"
         eind.style.marginBottom = "1rem"
-    } else {
+    } else if(btnText.innerHTML == "Reserveer"){
         begin.style.height = "5rem"
         arrow.style.rotate = "90deg"
+    } else if(btnText.innerHTML == "Reserveer!"){
+        voltooid.style.height = "2rem"
+        voltooid.style.margin = "2rem 0rem 1rem 0rem"
     }
 }
 
@@ -29,7 +33,7 @@ function buttonComesDown(){
     if(btnText.innerHTML == "Reserveer"){
         btnText.innerHTML = "Ga verder"
         arrow.style.rotate = "0deg"
-        btn.style.top = "4.2rem"
+        btn.style.top = "4.3rem"
         btn.style.backgroundColor = "rgb(245, 245, 245)"
         btn.style.boxShadow = "inset 0px 0px 4px 0px black"
         btnText.style.color = "black"
@@ -40,16 +44,11 @@ function buttonComesDown(){
 function buttonComesDown2(){
     arrow.style.rotate = "0deg"
     btnText.innerHTML = "Reserveer!"
-    btn.style.top = "10.75rem"
+    btn.style.top = "10.9rem"
 }
 
 function tijdStyle(){
     tijdenAlle.style.border = "solid 1px black"
-}
-
-function done(){
-    if(btnText.innerHTML == "Reserveer!"){
-    } 
 }
 
 function timeStyle(arrayNum){
@@ -61,24 +60,3 @@ function timeStyle(arrayNum){
 for (let index = 0; index < tijdenAlle.length; index++) {
     tijdenAlle[index].addEventListener("click", () => { timeStyle(index) })
 }
-
-
-
-
-
-
-
-
-
-
-// function checkboxCountAndHighlight(checkbox, parentElement, rl, naam, color) {
-//     let progress = checkbox.closest(".rl-cards").querySelectorAll('input[type=checkbox]:checked').length;
-
-//     if(parentElement === rl) {
-//             checkbox.closest(".rl-card").classList.toggle("rl-card-border");
-//             countHighlighter(naam, parentElement, progress, color);
-//     }
-// }
-
-// checkboxCountAndHighlight(checkbox, parentElement, "rl-waarneembaar", "waarneembaar", "countColor")
-
